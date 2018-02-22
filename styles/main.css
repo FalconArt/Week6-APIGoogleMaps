@@ -1,0 +1,46 @@
+@font-face{
+	font-family: "Couture";
+	src: url("../fonts/couture-bld.otf") 
+}
+
+@font-face{
+	font-family: "Bahn";
+	src: url("../fonts/bahnschrift.ttf") 
+}
+
+
+html{
+	margin: 0px;
+	padding: 0px;
+	background: url(../images/bg.jpg) no-repeat center fixed; 
+  -webkit-background-size: auto;
+  -moz-background-size: auto;
+  -o-background-size: auto;
+  background-size: auto;
+  text-align: center;
+}
+
+h1{
+	-webkit-animation: FadeInUp .9s ease-out;
+	-moz-animation: FadeInUp .9s ease-out;
+	-ms-animation: FadeInUp .9s ease-out;
+	-o-animation: FadeInUp .9s ease-out;
+	animation: FadeInUp .9s ease-out;
+	text-align: center;
+	font-family: "Bahn";
+	margin-top: 3%;
+	font-size: 3vw;
+	color: white;
+	text-shadow: 0px 2px 5px navy;
+	letter-spacing: 4px;
+}
+
+h2{
+	color: navy;
+	font-family: "Couture";
+	font-size: 16pt;
+}
+
+#map{
+	height:70%;
+}

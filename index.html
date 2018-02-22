@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+	<title> Week 5 Weather API </title>
+	<link href="https://fonts.googleapis.com/css?family=Exo+2" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="styles/animate.css" >
+	<link rel="stylesheet" type="text/css" href="styles/main.css" >
+</head>
+    <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 80%;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+
+  	<h1>WHERE ARE WE? </h1>
+    <div id="map"></div>
+    <script>
+      var map;
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: 36.2429, lng: -86.7385},
+          zoom: 18
+
+      	});
+
+          var marker = new google.maps.Marker({
+          	position: {lat: 36.2429, lng: -86.7385},
+          	map:map,
+          	icon: "images/pinpoint.png"
+          });
+
+          var infoWindow = new google.maps.InfoWindow({
+          	content:'<h2>Nossi College of Art</h2>'
+          });
+
+          marker.addListener('click', function(){
+          	infoWindow.open(map,marker);
+          });
+      }
+    </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAzH-_h1--wYqDwp95vF5Z8KOcdYveyPiA&callback=initMap"
+    ></script>
+	<script src="scripts/wow.min.js"></script>
+	<script src="scripts/skrollr.min.js"></script>
+	<script src="scripts/jquery.min.js"></script>
+	<script src="scripts/main.js"></script>
+	
+	<script>
+       new WOW().init();
+	</script>
+	<script>
+      var s = skrollr.init();
+	</script>
+
+
+</body>
+</html>
